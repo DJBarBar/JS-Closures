@@ -255,7 +255,7 @@ to 5. What we need to do is console.log(i) so that it logs like so:
  */
 
 var closure = function(i) {
-  return function () {
+  return function() {
     console.log(i);
 
   }
