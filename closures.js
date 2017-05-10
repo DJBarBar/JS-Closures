@@ -4,7 +4,7 @@
 
 function outer() {
   var name = 'Tyler';
-  return function() {
+  return function () {
     return 'The original name was ' + name;
   }
 }
@@ -64,9 +64,9 @@ callJake(435 - 555 - 9248) //Code Here
 /* Write a function called makeCounter that makes the following code work
 properly. */
 
-var makeCounter = function() {
+var makeCounter = function () {
   var count = 1;
-  return function() {
+  return function () {
     return count++;
   }
 } //Code Here
@@ -106,10 +106,10 @@ function counterFactory(value) {
 
 
   return {
-    inc: function() {
+    inc: function () {
       return value += 1;
     },
-    dec: function() {
+    dec: function () {
       return value -= 1;
     }
   }
@@ -142,7 +142,7 @@ function motivation(firstname, lastname) {
 
   var welcomeText = 'You\'re doing awesome, keep it up ';
 
-  var message = function() {
+  var message = function () {
     return welcomeText + firstname + " " + lastname + ".";
   } // code message function here.
 
@@ -171,7 +171,7 @@ motivation('Billy', 'Bob'); // 'You're doing awesome keep it up Billy Bob.
 invokes privateMethod. Invoke this by calling module.publicMethod(); outside
 the module scope */
 
-var module = (function() {
+var module = (function () {
   var person = {
     name: "phillip",
     age: 29,
@@ -185,7 +185,7 @@ var module = (function() {
   // Anything that is being returned is made public and can be invoked from
   // outside our lexical scope
   return {
-    publicMethod: function() {
+    publicMethod: function () {
       return privateMethod();
     } // Code here.
   };
@@ -207,7 +207,7 @@ var secondLevelFriends = ["Anne", "Harry", "Quinton"];
 var allUsers = ["Tom", "Dick", "Harry", "Anne", "Quinton", "Katie", "Mary"];
 
 function findPotentialFriends(existingFriends) {
-  return function(friend) {
+  return function (friend) {
     if (existingFriends.indexOf(friend) === -1) {
       return true;
     } else {
@@ -254,8 +254,8 @@ to 5. What we need to do is console.log(i) so that it logs like so:
  Fix the code below to log the desired output.
  */
 
-var closure = function(i) {
-  return function() {
+var closure = function (i) {
+  return function () {
     console.log(i);
 
   }
